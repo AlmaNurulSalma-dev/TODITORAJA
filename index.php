@@ -595,7 +595,7 @@ $events = getEventDetails();
 
         <div class="steps-grid-quarter slide-up-animation">
           //PENEMPATAN FOR EACH
-          <?php foreach($rooms as $room): ?>
+          <?php foreach($events as $event): ?>
           <div data-w-id="cf425558-2256-2f6a-5cf7-1078e43bf269" class="steps-card">
             <div class="steps-image"><img src="images/steps1.jpg" loading="eager" width="632" height="316" alt=""
                 srcset="images/steps1-p-500.jpg 500w, images/steps1-1.jpg 720w"
@@ -614,7 +614,9 @@ $events = getEventDetails();
                 class="circle"></div>
             </div>
             <div class="steps-card-text-block">
-              <h4>Consultation</h4>
+              <pre><?php var_dump($event); ?></pre>
+              <h4><?= htmlspecialchars($event['event_topic']) ?></h4>
+              
             </div>
           </div>
           <?php endforeach; ?>
