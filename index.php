@@ -378,11 +378,11 @@ $events = getEventDetails();
         <div class="hero-wrapper">
           <div data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c28e" style="opacity:0" class="hero-h1-wrapper">
             <div class="word-wrapper">
-              <h1>modern</h1>
+              <h1>TORAJA</h1>
             </div>
-            <h2 class="h2-hero-italic color-primary">Luxury</h2>
+            <h2 class="h2-hero-italic color-primary">TODI</h2>
             <div class="word-wrapper">
-              <h2 class="h2-hero-home">homes</h2>
+              <h2 class="h2-hero-home">TORAJA</h2>
             </div>
           </div>
           <p data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c297" style="opacity:0" class="max-width-420px">Our portfolio
@@ -430,6 +430,7 @@ $events = getEventDetails();
         <div class="space"></div>
       </div>
     </section>
+    
     <section id="learn-more" class="section">
       <div class="w-layout-blockcontainer container-full padding-10 w-container">
         <div class="listings-title-flex">
@@ -444,182 +445,134 @@ $events = getEventDetails();
         <div class="slide-up-animation w-dyn-list">
           <div role="list" class="listings-cards-flex w-dyn-items">
 
-            <?php foreach($rooms as $room): ?>
-            <div role="listitem" class="w-dyn-item"><a data-w-id="3fba0f8c-7dc1-5267-eac8-ede37ea58981"
-                href="/product/uptown-residences" class="listings-card w-inline-block">
-                <div class="listings-card-text-wrapper">
-                  <h4 class="listing-card-title"><?= htmlspecialchars($room['room_number']) ?></h4>
-                  <div class="listings-flex">
-                    <div class="card-amenities-flex">
-                      <h2 class="listing-card-icon">king_bed</h2>
-                      <h5 class="no-wrap">1 Bed</h5>
-                    </div>
-                    <div class="card-amenities-flex">
-                      <h2 class="listing-card-icon">shower</h2>
-                      <h5 class="no-wrap">1 Bath</h5>
-                    </div>
+          <?php $index = 0; ?>
+          <?php foreach($rooms as $room): ?>
+              <?php if ($index < 6): ?>
+                  <div role="listitem" class="w-dyn-item">
+                      <a data-w-id="3fba0f8c-7dc1-5267-eac8-ede37ea58981"
+                          href="details.php?room_id=<?= isset($room['id']) ? urlencode($room['id']) : '' ?>" class="listings-card w-inline-block">
+                          <div class="listings-card-text-wrapper">
+                              <h4 class="listing-card-title"><?= htmlspecialchars($room['room_number']) ?></h4>
+                              <div class="listings-flex">
+                                  <div class="card-amenities-flex">
+                                      <h2 class="listing-card-icon">king_bed</h2>
+                                      <h5 class="no-wrap">1 Bed</h5>
+                                  </div>
+                                  <div class="card-amenities-flex">
+                                      <h2 class="listing-card-icon">shower</h2>
+                                      <h5 class="no-wrap">1 Bath</h5>
+                                  </div>
+                              </div>
+                              <h5 class="color-white"><b>Rp. <?= htmlspecialchars($room['price']) ?></b></h5>
+                          </div>
+                          <div class="listing-image-wrapper">
+                              <img class="listing-image" src="<?= htmlspecialchars($room['photo']) ?>" width="360" height="320" alt=""
+                                  sizes="(max-width: 479px) 288px, 360px"
+                                  loading="eager" 
+                                  srcset="<?= htmlspecialchars($room['photo']) ?> 360w, <?= htmlspecialchars($room['photo']) ?> 720w" />
+                              <div style="opacity:0.1;" class="circle"></div>
+                          </div>
+                          <div class="listings-card-badge">
+                              <p class="badge-text">For </p>
+                              <p class="badge-text">Sale</p>
+                          </div>
+                      </a>
                   </div>
-                  <h5 class="color-white"><b>Rp. <?= htmlspecialchars($room['price']) ?></b></h5>
-                </div>
-                <div class="listing-image-wrapper"><img class="listing-image" src="<?= htmlspecialchars($room['photo']) ?>" width="360"
-                    height="320" alt="" sizes="(max-width: 479px) 288px, 360px"
-                    data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                    loading="eager" srcset="<?= htmlspecialchars($room['photo']) ?>, <?= htmlspecialchars($room['photo']) ?>" />
-                  <div
-                    style="opacity:0.1;-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                    class="circle"></div>
-                  <div class="w-layout-hflex listing-flex">
-                    <h5
-                      style="display:none;-webkit-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                      class="view-more">View More</h5>
-                    <div data-is-ix2-target="1" class="lottie-arrow" data-w-id="3682a962-77a6-75bd-b268-98107053ac20"
-                      data-animation-type="lottie" data-src="images/view-more.json" data-loop="0" data-direction="1"
-                      data-autoplay="0" data-renderer="svg" data-default-duration="1.5015014403440954" data-duration="0"
-                      data-ix2-initial-state="0"></div>
-                  </div>
-                </div>
-                <div class="listings-card-badge">
-                  <p class="badge-text">For </p>
-                  <p class="badge-text">Sale</p>
-                </div>
-              </a>
-            </div>
-            <?php endforeach; ?>
-            
-            
-            <div role="listitem" class="w-dyn-item"><a data-w-id="3fba0f8c-7dc1-5267-eac8-ede37ea58981"
-                href="/product/oceanview-condo" class="listings-card w-inline-block">
-                <div class="listings-card-text-wrapper">
-                  <h4 class="listing-card-title">Oceanview Condo</h4>
-                  <div class="listings-flex">
-                    <div class="card-amenities-flex">
-                      <h2 class="listing-card-icon">king_bed</h2>
-                      <h5 class="no-wrap">2 Beds</h5>
-                    </div>
-                    <div class="card-amenities-flex">
-                      <h2 class="listing-card-icon">shower</h2>
-                      <h5 class="no-wrap">1 Bath</h5>
-                    </div>
-                  </div>
-                  <h4 class="color-white">$4,500</h4>
-                </div>
-                <div class="listing-image-wrapper"><img class="listing-image" src="images/listingb.jpg" width="360"
-                    height="320" alt="" sizes="(max-width: 479px) 288px, 360px"
-                    data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                    loading="eager" srcset="images/listingb-p-500.jpg 500w, images/listingb.jpg 720w" />
-                  <div
-                    style="opacity:0.1;-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                    class="circle"></div>
-                  <div class="w-layout-hflex listing-flex">
-                    <h5
-                      style="display:none;-webkit-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                      class="view-more">View More</h5>
-                    <div data-is-ix2-target="1" class="lottie-arrow" data-w-id="3682a962-77a6-75bd-b268-98107053ac20"
-                      data-animation-type="lottie" data-src="images/view-more.json" data-loop="0" data-direction="1"
-                      data-autoplay="0" data-renderer="svg" data-default-duration="1.5015014403440954" data-duration="0"
-                      data-ix2-initial-state="0"></div>
-                  </div>
-                </div>
-                <div class="listings-card-badge">
-                  <p class="badge-text">For </p>
-                  <p class="badge-text">Rent</p>
-                </div>
-              </a></div>
-            <div role="listitem" class="w-dyn-item"><a data-w-id="3fba0f8c-7dc1-5267-eac8-ede37ea58981"
-                href="/product/modern-apartment" class="listings-card w-inline-block">
-                <div class="listings-card-text-wrapper">
-                  <h4 class="listing-card-title">Modern Apartment</h4>
-                  <div class="listings-flex">
-                    <div class="card-amenities-flex">
-                      <h2 class="listing-card-icon">king_bed</h2>
-                      <h5 class="no-wrap">2 Beds</h5>
-                    </div>
-                    <div class="card-amenities-flex">
-                      <h2 class="listing-card-icon">shower</h2>
-                      <h5 class="no-wrap">2 Baths</h5>
-                    </div>
-                  </div>
-                  <h4 class="color-white">$479,000</h4>
-                </div>
-                <div class="listing-image-wrapper"><img class="listing-image" src="images/listingc.jpg" width="360"
-                    height="320" alt="" sizes="(max-width: 479px) 288px, 360px"
-                    data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                    loading="eager" srcset="images/listingc-p-500.jpg 500w, images/listingc.jpg 720w" />
-                  <div
-                    style="opacity:0.1;-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                    class="circle"></div>
-                  <div class="w-layout-hflex listing-flex">
-                    <h5
-                      style="display:none;-webkit-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 200px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                      class="view-more">View More</h5>
-                    <div data-is-ix2-target="1" class="lottie-arrow" data-w-id="3682a962-77a6-75bd-b268-98107053ac20"
-                      data-animation-type="lottie" data-src="images/view-more.json" data-loop="0" data-direction="1"
-                      data-autoplay="0" data-renderer="svg" data-default-duration="1.5015014403440954" data-duration="0"
-                      data-ix2-initial-state="0"></div>
-                  </div>
-                </div>
-                <div class="listings-card-badge">
-                  <p class="badge-text">For </p>
-                  <p class="badge-text">Sale</p>
-                </div>
-              </a></div>
-          </div>
-        </div>
-        <div class="space-large"></div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="w-layout-blockcontainer container-full w-container">
-        <div class="image-wrapper"><img src="images/parallaximage-1.jpg" loading="eager" alt="" height=""
-            sizes="(max-width: 1440px) 100vw, 1440px"
-            srcset="images/parallaximage-p-500.jpg 500w, images/parallaximage-p-800.jpg 800w, images/parallaximage-p-1080.jpg 1080w, images/parallaximage.jpg 1440w"
-            class="parallax-image move-up" />
-          <div data-w-id="fb46222e-9ad3-e171-b502-6017580421ce" class="parallax-trigger"></div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="w-layout-blockcontainer container-full padding-5 w-container">
-        <div class="space-large"></div>
-        <div class="steps-title-flex">
-          <h2 class="slide-from-left-animation">Welcome to <a href="#" class="h2-italic color-primary">Modern Luxury</a>
-          </h2>
-          <div class="steps-text-block slide-from-right-animation">
-            <h5>BEAUTIFUL PROPERTies</h5>
-            <p class="max-width-450px">Experience the epitome of luxury living with our exceptional collection that
-              offer unparalleled comfort.</p>
-          </div>
-        </div>
-
-        <div class="space"></div>
-
-        <div class="steps-grid-quarter slide-up-animation">
-          //PENEMPATAN FOR EACH
-          <?php foreach($events as $event): ?>
-          <div data-w-id="cf425558-2256-2f6a-5cf7-1078e43bf269" class="steps-card">
-            <div class="steps-image"><img src="images/steps1.jpg" loading="eager" width="632" height="316" alt=""
-                srcset="images/steps1-p-500.jpg 500w, images/steps1-1.jpg 720w"
-                sizes="(max-width: 479px) 240px, (max-width: 767px) 480px, 632px" />
-              <div
-                style="display:none;-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
-                class="services-text-wrapper">
-                <div class="w-layout-hflex services-text-flex"><img src="images/align_flex_end.png" loading="eager"
-                    alt="align flex end" />
-                  <p class="services-paragraph">We begin by scheduling a personal consultation with you to understand
-                    your specific vision for your dream property.</p>
-                </div>
-              </div>
-              <div
-                style="opacity:0.1;-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                class="circle"></div>
-            </div>
-            <div class="steps-card-text-block">
-              <pre><?php var_dump($event); ?></pre>
-              <h4><?= htmlspecialchars($event['event_topic']) ?></h4>
-              
-            </div>
-          </div>
+              <?php endif; ?>
+              <?php $index++; ?>
           <?php endforeach; ?>
+
+          <button id="view-more-btn" class="view-more-btn">View More</button>
+          <style>
+            /* Tombol dengan warna abu-abu dan teks putih */
+            .view-more-btn {
+                background-color: #808080; /* Warna abu-abu */
+                color: white; /* Warna teks putih */
+                border: none; /* Hilangkan border */
+                padding: 10px 20px; /* Spasi di dalam tombol */
+                border-radius: 5px; /* Sudut melengkung */
+                font-size: 16px; /* Ukuran font */
+                cursor: pointer; /* Tampilkan pointer saat hover */
+                transition: background-color 0.3s ease; /* Efek transisi */
+            }
+
+            /* Efek hover untuk tombol */
+            .view-more-btn:hover {
+                background-color: #696969; /* Warna abu-abu lebih gelap saat hover */
+            }
+
+            /* Efek klik */
+            .view-more-btn:active {
+                background-color: #505050; /* Warna lebih gelap saat diklik */
+            }
+
+            /* Tambahan untuk fokus (aksesibilitas) */
+            .view-more-btn:focus {
+                outline: 2px solid #ffffff; /* Lingkaran putih saat fokus */
+                outline-offset: 3px;
+            }
+        </style>
+        <script>
+          document.getElementById('view-more-btn').addEventListener('click', function () {
+              const hiddenItems = document.querySelectorAll('.w-dyn-item.hidden');
+              if (hiddenItems.length === 0) {
+                  console.warn('No hidden items found!');
+                  return;
+              }
+              
+              hiddenItems.forEach(item => {
+                  item.style.display = 'block';
+              });
+
+              // Sembunyikan tombol setelah klik
+              this.style.display = 'none';
+          });
+        </script>
+
+
+            
+            
+
+
+        <?php $index = 0; ?>
+        <div class="space"></div>
+        <div class="steps-grid-quarter slide-up-animation">
+            <?php foreach ($events as $event): ?>
+                <?php if ($index < 6): ?>
+                    <div data-w-id="cf425558-2256-2f6a-5cf7-1078e43bf269" class="steps-card">
+                        <div class="steps-image">
+                            <img 
+                                src="<?= htmlspecialchars($event['image']) ?>" 
+                                loading="eager" 
+                                width="632" 
+                                height="316" 
+                                alt="<?= htmlspecialchars($event['event_topic']) ?>"
+                                srcset="<?= htmlspecialchars($event['image']) ?>-p-500.jpg 500w, <?= htmlspecialchars($event['image']) ?> 720w"
+                                sizes="(max-width: 479px) 240px, (max-width: 767px) 480px, 632px" 
+                            />
+                            <div
+                                style="display:none;-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1);opacity:0"
+                                class="services-text-wrapper"
+                            >
+                                <div class="w-layout-hflex services-text-flex">
+                                    <img src="images/align_flex_end.png" loading="eager" alt="align flex end" />
+                                    <p class="services-paragraph">
+                                        <?= htmlspecialchars($event['short_details']) ?>
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="opacity:0.1;" class="circle"></div>
+                        </div>
+                        <div class="steps-card-text-block">
+                            <h4><?= htmlspecialchars($event['event_topic']) ?></h4>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php $index++; ?>
+            <?php endforeach; ?>
+        </div>
+        
+
 
 
 
