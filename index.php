@@ -2,6 +2,7 @@
 require_once __DIR__ . '/functions/database_functions.php';
 $rooms = getRoomDetails();
 $events = getEventDetails();
+$tourism = getTourismDetails();
 ?>
 
 <!DOCTYPE html>
@@ -455,8 +456,6 @@ $events = getEventDetails();
                               <h4 class="listing-card-title"><?= htmlspecialchars($room['room_number']) ?></h4>
                               <div class="listings-flex">
                                   <div class="card-amenities-flex">
-                                      <h2 class="listing-card-icon">king_bed</h2>
-                                      <h5 class="no-wrap">1 Bed</h5>
                                   </div>
                                   <div class="card-amenities-flex">
                                       <h2 class="listing-card-icon">shower</h2>
@@ -482,7 +481,7 @@ $events = getEventDetails();
               <?php $index++; ?>
           <?php endforeach; ?>
 
-          <button id="view-more-btn" class="view-more-btn">View More</button>
+          <button id="view-more-btn" class="view-more-btn" onclick="location.href='detailsPenginapan.php';">Lihat Semua Penginapan</button>
           <style>
             /* Tombol dengan warna abu-abu dan teks putih */
             .view-more-btn {
@@ -767,9 +766,9 @@ $events = getEventDetails();
       <div class="w-layout-blockcontainer container-full w-container">
         <div class="title-flex projects-title">
           <div class="text-block slide-from-left-animation">
-            <h5>destinations</h5>
+            <h5>This is</h5>
             <div class="flex-title">
-              <h2>our <span class="h2-italic color-primary">Areas</span></h2>
+              <h2>our <span class="h2-italic color-primary">Tourism</span></h2>
             </div>
             <p class="max-width-480px">Embark on a captivating journey through the most desirable locations that define
               the pinnacle of luxurious living.</p>
@@ -782,24 +781,32 @@ $events = getEventDetails();
             data-w-id="77f8dbd2-94ea-a7cd-ed6e-ee24130b856f" data-autoplay-limit="0" data-nav-spacing="3"
             data-duration="500" data-infinite="false">
             <div class="locations-mask w-slider-mask">
-              <div class="locations-slide w-slide">
-                <div class="w-dyn-list">
-                  <div role="list" class="w-dyn-items">
-                    <div role="listitem" class="w-dyn-item"><a href="/locations/london"
-                        data-w-id="e7a4463d-b02b-1e4c-e6f1-335b4dbe442c" class="locations-card w-inline-block">
-                        <h6 class="locations-title">London</h6>
-                        <div class="locations-overlay"></div><img
-                          style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                          src="images/london.jpg" loading="eager" alt="" sizes="(max-width: 479px) 90vw, 320px"
-                          srcset="images/london-p-500.jpg 500w, images/london.jpg 640w" class="image-locations" />
-                      </a></div>
+
+            <?php foreach($tourism as $tourism1): ?>
+              <?php if ($index < 6): ?>
+                <div class="locations-slide w-slide">
+                  <div class="w-dyn-list">
+                    <div role="list" class="w-dyn-items">
+                      <div role="listitem" class="w-dyn-item"><a href="locations\london.html"
+                          data-w-id="e7a4463d-b02b-1e4c-e6f1-335b4dbe442c" class="locations-card w-inline-block">
+                          <h6 class="locations-title"><b><?= htmlspecialchars($tourism1['title']) ?></b></h6>
+                          <div class="locations-overlay"></div><img
+                            style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                            src="images/london.jpg" loading="eager" alt="" sizes="(max-width: 479px) 90vw, 320px"
+                            srcset="images/london-p-500.jpg 500w, images/london.jpg 640w" class="image-locations" />
+                        </a></div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              <?php endif; ?>
+              <?php $index++; ?>
+          <?php endforeach; ?>
+
+
               <div class="locations-slide w-slide">
                 <div class="w-dyn-list">
                   <div role="list" class="w-dyn-items">
-                    <div role="listitem" class="w-dyn-item"><a href="/locations/new-york"
+                    <div role="listitem" class="w-dyn-item"><a href="locations\new-york.html"
                         data-w-id="1072465b-d70b-a674-00a7-3a9a11f61c06" class="locations-card w-inline-block">
                         <h6 class="locations-title">New York</h6>
                         <div class="locations-overlay"></div><img
@@ -813,7 +820,7 @@ $events = getEventDetails();
               <div class="locations-slide w-slide">
                 <div class="w-dyn-list">
                   <div role="list" class="w-dyn-items">
-                    <div role="listitem" class="w-dyn-item"><a href="/locations/los-angeles"
+                    <div role="listitem" class="w-dyn-item"><a href="locations\los-angeles.html"
                         data-w-id="652bcdf1-bec1-2fad-0469-76ee93fefaa7" class="locations-card w-inline-block">
                         <h6 class="locations-title">Los Angeles</h6>
                         <div class="locations-overlay"></div><img
@@ -841,7 +848,7 @@ $events = getEventDetails();
               <div class="locations-slide w-slide">
                 <div class="w-dyn-list">
                   <div role="list" class="w-dyn-items">
-                    <div role="listitem" class="w-dyn-item"><a href="/locations/paris"
+                    <div role="listitem" class="w-dyn-item"><a href="locations\paris.html"
                         data-w-id="e38ee706-0193-b881-d44c-46be45e7ed44" class="locations-card w-inline-block">
                         <h6 class="locations-title">Paris</h6>
                         <div class="locations-overlay"></div><img

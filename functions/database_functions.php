@@ -38,5 +38,26 @@ function getEventDetails() {
         return [];
     }
 }
+function getTourismDetails() {
+    global $db;
+    try {
+        $query = "
+            SELECT
+                title,
+                photo,
+            FROM tourism
+            ORDER BY id ASC
+            LIMIT 6
+        ";
+        $stmt = $db->query($query);
+        $result = $stmt->fetchAll();
+        echo "Hasil query: ";
+        print_r($result);
+        return $result;
+    } catch(Exception $e) {
+        error_log($e->getMessage());
+        return [];
+    }
+}
 
 ?>

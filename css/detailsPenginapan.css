@@ -1,0 +1,43 @@
+/* Kontainer grid */
+.listings-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membagi menjadi 3 kolom */
+    gap: 20px 5px; /* 20px jarak vertikal, 5px jarak horizontal */
+    padding: 0 10px; /* Padding atas-bawah 0, kiri-kanan 10px agar simetris */
+    margin: 20px auto; /* Tengahkan kontainer di dalam halaman */
+    max-width: calc(3 * 360px + 2 * 5px + 20px); /* Sesuaikan dengan lebar kartu dan gap */
+}
+
+/* Styling kartu */
+.listings-card {
+    margin: 0; /* Hilangkan margin agar sesuai dengan grid */
+}
+
+/* Gambar kartu */
+.listing-image-wrapper {
+    width: 100%;
+    height: 200px; /* Semua gambar memiliki tinggi tetap */
+    overflow: hidden;
+}
+
+.listing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi seluruh area tanpa distorsi */
+}
+
+/* Responsif untuk layar sedang */
+@media (max-width: 768px) {
+    .listings-container {
+        grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom untuk layar sedang */
+        max-width: calc(2 * 360px + 1 * 5px + 20px); /* Sesuaikan lebar grid */
+    }
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 480px) {
+    .listings-container {
+        grid-template-columns: 1fr; /* Jadi 1 kolom untuk layar kecil */
+        max-width: calc(1 * 360px + 0 * 5px + 20px); /* Sesuaikan lebar grid */
+    }
+}
