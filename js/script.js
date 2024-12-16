@@ -13,3 +13,8 @@ document.getElementById('view-more-btn').addEventListener('click', function () {
     this.style.display = 'none';
 });
 
+function changeImage(src) {
+    document.getElementById('mainImage').src = src;
+}
+
+

@@ -379,22 +379,19 @@ $tourism = getTourismDetails();
         <div class="hero-wrapper">
           <div data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c28e" style="opacity:0" class="hero-h1-wrapper">
             <div class="word-wrapper">
-              <h1>TORAJA</h1>
+              <h1>TODI</h1>
             </div>
-            <h2 class="h2-hero-italic color-primary">TODI</h2>
             <div class="word-wrapper">
               <h2 class="h2-hero-home">TORAJA</h2>
             </div>
           </div>
-          <p data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c297" style="opacity:0" class="max-width-420px">Our portfolio
-            includes exquisite properties nestled in prime locations and prestigious neighborhoods renowned for their
-            desirability.</p><a href="#learn-more" data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c29a"
+          <p data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c297" style="opacity:0" class="max-width-420px">TodiToraja adalah platform perjalanan unik yang menghubungkan Anda dengan pesona budaya dan keindahan alam Toraja. Temukan hotel terbaik, eksplorasi destinasi wisata eksotis, dan nikmati pengalaman autentik khas Toraja dalam satu platform yang modern, cepat, dan terpercaya!</p><a href="#learn-more" data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c29a"
             class="spinner-wrapper w-inline-block">
             <div data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c29b" class="spinner-image"></div>
             <p style="-webkit-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(180deg) skew(0, 0);-moz-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(180deg) skew(0, 0);-ms-transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(180deg) skew(0, 0);transform:translate3d(0, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(180deg) skew(0, 0)"
               class="spinner-icon">foundation</p>
           </a>
-        </div><img class="hero-image" src="images/image.png" alt="buildings" style="opacity:0"
+        </div><img class="hero-image" src="images\image.png" alt="buildings" style="opacity:0"
           sizes="(max-width: 991px) 90vw, 948px" data-w-id="06b3df88-53d6-c8c3-8f13-d1ec1711c299" loading="eager"
           srcset="images/image-p-500.png 500w, images/image-p-800.png 800w, images/image-1.png 948w" />
       </div>
@@ -407,25 +404,25 @@ $tourism = getTourismDetails();
             <div class="icon-square-wrapper">
               <h2 class="icon">apartment</h2>
             </div>
-            <h5 class="numbers-description">Elegant<br />Apartments<br /></h5>
+            <h5 class="numbers-description">Informasi<br />Terpercaya</h5>
           </div>
           <div class="wrapper-quarter">
             <div class="icon-square-wrapper">
               <h2 class="icon">villa</h2>
             </div>
-            <h5 class="numbers-description">Luxury<br />Houses</h5>
+            <h5 class="numbers-description">Akomodasi<br />Lengkap</h5>
           </div>
           <div class="wrapper-quarter">
             <div class="icon-square-wrapper">
               <h2 class="icon">recommend</h2>
             </div>
-            <h5 class="numbers-description">Satisfied<br />Guests</h5>
+            <h5 class="numbers-description">Autentik<br />Toraja</h5>
           </div>
           <div class="wrapper-quarter">
             <div class="icon-square-wrapper">
               <h2 class="icon">sentiment_very_satisfied</h2>
             </div>
-            <h5 class="numbers-description">Happy<br />Owners</h5>
+            <h5 class="numbers-description">Mudah<br />Digunakan</h5>
           </div>
         </div>
         <div class="space"></div>
@@ -435,141 +432,167 @@ $tourism = getTourismDetails();
     <section id="learn-more" class="section">
       <div class="w-layout-blockcontainer container-full padding-10 w-container">
         <div class="listings-title-flex">
-          <h2 class="slide-from-left-animation">Property <span class="h2-italic color-primary">Listings</span></h2>
+          <h2 class="slide-from-left-animation">Penginapan <span class="h2-italic color-primary">di Toraja</span></h2>
           <div class="listings-text-block slide-from-right-animation">
-            <h5>Modern &amp; Stylish</h5>
-            <p class="max-width-450px">Discover the allure of prime locations and coveted neighborhoods with our
-              selection of luxury properties.</p>
+            <h5>Nyaman &amp; Autentik</h5>
+            <p class="max-width-450px">Rasakan kehangatan budaya dan keindahan alam Toraja melalui pilihan akomodasi terbaik kami yang memadukan kenyamanan modern dengan nuansa lokal.</p>
           </div>
         </div>
         <div class="space"></div>
         <div class="slide-up-animation w-dyn-list">
           <div role="list" class="listings-cards-flex w-dyn-items">
 
-          <?php $index = 0; ?>
-          <?php foreach($rooms as $room): ?>
-              <?php if ($index < 6): ?>
-                  <div role="listitem" class="w-dyn-item">
-                      <a data-w-id="3fba0f8c-7dc1-5267-eac8-ede37ea58981"
-                          href="details.php?room_id=<?= isset($room['id']) ? urlencode($room['id']) : '' ?>" class="listings-card w-inline-block">
-                          <div class="listings-card-text-wrapper">
-                              <h4 class="listing-card-title"><?= htmlspecialchars($room['room_number']) ?></h4>
-                              <div class="listings-flex">
-                                  <div class="card-amenities-flex">
-                                  </div>
-                                  <div class="card-amenities-flex">
-                                      <h2 class="listing-card-icon">shower</h2>
-                                      <h5 class="no-wrap">1 Bath</h5>
-                                  </div>
-                              </div>
-                              <h5 class="color-white"><b>Rp. <?= htmlspecialchars($room['price']) ?></b></h5>
-                          </div>
-                          <div class="listing-image-wrapper">
-                              <img class="listing-image" src="<?= htmlspecialchars($room['photo']) ?>" width="360" height="320" alt=""
-                                  sizes="(max-width: 479px) 288px, 360px"
-                                  loading="eager" 
-                                  srcset="<?= htmlspecialchars($room['photo']) ?> 360w, <?= htmlspecialchars($room['photo']) ?> 720w" />
-                              <div style="opacity:0.1;" class="circle"></div>
-                          </div>
-                          <div class="listings-card-badge">
-                              <p class="badge-text">For </p>
-                              <p class="badge-text">Sale</p>
-                          </div>
-                      </a>
-                  </div>
-              <?php endif; ?>
-              <?php $index++; ?>
-          <?php endforeach; ?>
+          <div class="w-layout-blockcontainer container-full padding-10 w-container">
+    <div class="listings-title-flex">
+        <h2 class="slide-from-left-animation">Penginapan <span class="h2-italic color-primary">di Toraja</span></h2>
+        <div class="listings-text-block slide-from-right-animation">
+            <h5>Nyaman &amp; Autentik</h5>
+            <p class="max-width-450px">Rasakan kehangatan budaya dan keindahan alam Toraja melalui pilihan akomodasi terbaik kami yang memadukan kenyamanan modern dengan nuansa lokal.</p>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="slide-up-animation w-dyn-list">
+        <div role="list" class="listings-cards-flex w-dyn-items">
 
-          <button id="view-more-btn" class="view-more-btn" onclick="location.href='detailsPenginapan.php';">Lihat Semua Penginapan</button>
-          <style>
-            /* Tombol dengan warna abu-abu dan teks putih */
-            .view-more-btn {
-                background-color: #808080; /* Warna abu-abu */
-                color: white; /* Warna teks putih */
-                border: none; /* Hilangkan border */
-                padding: 10px 20px; /* Spasi di dalam tombol */
-                border-radius: 5px; /* Sudut melengkung */
-                font-size: 16px; /* Ukuran font */
-                cursor: pointer; /* Tampilkan pointer saat hover */
-                transition: background-color 0.3s ease; /* Efek transisi */
-            }
-
-            /* Efek hover untuk tombol */
-            .view-more-btn:hover {
-                background-color: #696969; /* Warna abu-abu lebih gelap saat hover */
-            }
-
-            /* Efek klik */
-            .view-more-btn:active {
-                background-color: #505050; /* Warna lebih gelap saat diklik */
-            }
-
-            /* Tambahan untuk fokus (aksesibilitas) */
-            .view-more-btn:focus {
-                outline: 2px solid #ffffff; /* Lingkaran putih saat fokus */
-                outline-offset: 3px;
-            }
-        </style>
-        <script>
-          document.getElementById('view-more-btn').addEventListener('click', function () {
-              const hiddenItems = document.querySelectorAll('.w-dyn-item.hidden');
-              if (hiddenItems.length === 0) {
-                  console.warn('No hidden items found!');
-                  return;
-              }
-              
-              hiddenItems.forEach(item => {
-                  item.style.display = 'block';
-              });
-
-              // Sembunyikan tombol setelah klik
-              this.style.display = 'none';
-          });
-        </script>
-
-
-            
-            
-
-
-        <?php $index = 0; ?>
-        <div class="space"></div>
-        <div class="steps-grid-quarter slide-up-animation">
-            <?php foreach ($events as $event): ?>
+            <?php $index = 0; ?>
+            <?php foreach($rooms as $room): ?>
                 <?php if ($index < 6): ?>
-                    <div data-w-id="cf425558-2256-2f6a-5cf7-1078e43bf269" class="steps-card">
-                        <div class="steps-image">
-                            <img 
-                                src="<?= htmlspecialchars($event['image']) ?>" 
-                                loading="eager" 
-                                width="632" 
-                                height="316" 
-                                alt="<?= htmlspecialchars($event['event_topic']) ?>"
-                                srcset="<?= htmlspecialchars($event['image']) ?>-p-500.jpg 500w, <?= htmlspecialchars($event['image']) ?> 720w"
-                                sizes="(max-width: 479px) 240px, (max-width: 767px) 480px, 632px" 
-                            />
-                            <div
-                                style="display:none;-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1);opacity:0"
-                                class="services-text-wrapper"
-                            >
-                                <div class="w-layout-hflex services-text-flex">
-                                    <img src="images/align_flex_end.png" loading="eager" alt="align flex end" />
-                                    <p class="services-paragraph">
-                                        <?= htmlspecialchars($event['short_details']) ?>
-                                    </p>
-                                </div>
+                    <div role="listitem" class="w-dyn-item">
+                        <a data-w-id="3fba0f8c-7dc1-5267-eac8-ede37ea58981"
+                            href="details.php?room_id=<?= isset($room['id']) ? urlencode($room['id']) : '' ?>" class="listings-card w-inline-block">
+                            <div class="listings-card-text-wrapper">
+                                <h4 class="listing-card-title"><?= htmlspecialchars($room['room_number']) ?></h4>
+                                    <div class="listings-flex">
+                                        <div class="card-amenities-flex">
+                                            <h2 class="listing-card-icon">king_bed</h2>
+                                            <h5 class="no-wrap">1 Bed</h5>
+                                        </div>
+                                        <div class="card-amenities-flex">
+                                            <h2 class="listing-card-icon">high_density</h2>
+                                            <h4 class="color-white">Rp. <?= htmlspecialchars($room['price']) ?></h4>
+                                        </div>
+                                    </div>
                             </div>
-                            <div style="opacity:0.1;" class="circle"></div>
-                        </div>
-                        <div class="steps-card-text-block">
-                            <h4><?= htmlspecialchars($event['event_topic']) ?></h4>
-                        </div>
+                            <div class="listing-image-wrapper">
+                                <img class="listing-image" src="<?= htmlspecialchars($room['photo']) ?>" width="360" height="320" alt=""
+                                    sizes="(max-width: 479px) 288px, 360px"
+                                    loading="eager" 
+                                    srcset="<?= htmlspecialchars($room['photo']) ?> 360w, <?= htmlspecialchars($room['photo']) ?> 720w" />
+                                <div style="opacity:0.1;" class="circle"></div>
+                            </div>
+                            <div class="listings-card-badge">
+                                <p class="badge-text">Pesan </p>
+                            </div>
+                        </a>
                     </div>
                 <?php endif; ?>
                 <?php $index++; ?>
             <?php endforeach; ?>
+
+            <!-- Tombol Lihat Semua Penginapan -->
+            <div class="view-more-container">
+                <button id="view-more-btn" class="view-more-btn" onclick="location.href='detailsPenginapan.php';">Lihat Semua Penginapan</button>
+            </div>
+
         </div>
+    </div>
+
+    <div class="slide-up-animation w-dyn-list">
+        <div role="list" class="listings-cards-flex w-dyn-items">
+
+            <?php $index = 0; ?>
+            <?php foreach($events as $event): ?>
+                <?php if ($index < 6): ?>
+                    <div role="listitem" class="w-dyn-item">
+                        <a data-w-id="3fba0f8c-7dc1-5267-eac8-ede37ea58981"
+                            href="details.php?room_id=<?= isset($event['id']) ? urlencode($event['id']) : '' ?>" class="listings-card w-inline-block">
+                            <div class="listings-card-text-wrapper">
+                                <h4 class="listing-card-title"><?= htmlspecialchars($event['event_topic']) ?></h4>
+                                    <div class="listings-flex">
+                                        <div class="card-amenities-flex">
+                                            <h5 class="color-white"><?= htmlspecialchars($event['short_details']) ?></h5>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="listing-image-wrapper">
+                                <img class="listing-image" src="<?= htmlspecialchars($event['image']) ?>" width="360" height="320" alt=""
+                                    sizes="(max-width: 479px) 288px, 360px"
+                                    loading="eager" 
+                                    srcset="<?= htmlspecialchars($event['image']) ?> 360w, <?= htmlspecialchars($event['image']) ?> 720w" />
+                                <div style="opacity:0.1;" class="circle"></div>
+                            </div>
+                            <div class="listings-card-badge">
+                                <p class="badge-text">Pesan </p>
+                            </div>
+                        </a>
+                    </div>
+                <?php endif; ?>
+                <?php $index++; ?>
+            <?php endforeach; ?>
+
+            <!-- Tombol Lihat Semua Festival -->
+            <div class="view-more-container">
+                <button id="view-more-btn" class="view-more-btn" onclick="location.href='detailsPenginapan.php';">Lihat Semua Festival</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- CSS -->
+<style>
+    .view-more-container {
+        display: flex; /* Menggunakan flexbox untuk tata letak */
+        justify-content: center; /* Pusatkan tombol secara horizontal */
+        align-items: center; /* (Opsional) Pusatkan secara vertikal jika diperlukan */
+        margin-top: 20px; /* Tambahkan margin atas */
+        margin-bottom: 20px; /* Tambahkan margin bawah */
+    }
+
+    .view-more-btn {
+        background-color: #808080; /* Warna abu-abu */
+        color: white; /* Warna teks putih */
+        border: none; /* Hilangkan border */
+        padding: 10px 20px; /* Spasi di dalam tombol */
+        border-radius: 5px; /* Sudut melengkung */
+        font-size: 16px; /* Ukuran font */
+        cursor: pointer; /* Tampilkan pointer saat hover */
+        transition: background-color 0.3s ease; /* Efek transisi */
+    }
+
+    .view-more-btn:hover {
+        background-color: #696969; /* Warna abu-abu lebih gelap saat hover */
+    }
+
+    .view-more-btn:active {
+        background-color: #505050; /* Warna lebih gelap saat diklik */
+    }
+
+    .view-more-btn:focus {
+        outline: 2px solid #ffffff; /* Lingkaran putih saat fokus */
+        outline-offset: 3px;
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    document.getElementById('view-more-btn').addEventListener('click', function () {
+        const hiddenItems = document.querySelectorAll('.w-dyn-item.hidden');
+        if (hiddenItems.length === 0) {
+            console.warn('No hidden items found!');
+            return;
+        }
+        
+        hiddenItems.forEach(item => {
+            item.style.display = 'block';
+        });
+
+        // Sembunyikan tombol setelah klik
+        this.style.display = 'none';
+    });
+</script>
         
 
 
